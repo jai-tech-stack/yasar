@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #ff582f;
+  --secondary: #c4f112;
+  --tertiary: #460af5;
+  --dark: #0d0d0d;
+  --white: #fff;
+  --black: #000;
+}
+
+body {
+  @apply antialiased text-[#000] bg-[#F5F5F5];
+}
+
+/* Reuse HTML template styles */
+.fit--img {
+  @apply w-full h-full object-cover;
+}
+.radius--50 {
+  @apply rounded-full;
+}
+.text--white {
+  color: var(--white);
+}
+.text--tertiary {
+  color: var(--tertiary);
+}
+.text--secondary {
+  color: var(--secondary);
+}
+.bg--tertiary {
+  background-color: var(--tertiary);
+}
+.bg--black {
+  background-color: var(--dark);
+}
+.bg--secondary {
+  background-color: var(--secondary);
+}
+.bg--white {
+  @apply bg-white;
+}
+
+/* Section spacing like original */
+.section-py {
+  @apply py-24 md:py-32;
+}
+
+/* Button pill style from HTML */
+.btn-pill {
+  @apply inline-flex items-center gap-6 rounded-full px-8 py-4 font-semibold transition-all;
+}
+.btn-pill-light {
+  @apply bg-white text-black hover:bg-secondary hover:text-black;
+}
+.btn-pill-tertiary {
+  @apply bg-tertiary text-white hover:opacity-90;
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
